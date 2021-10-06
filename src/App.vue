@@ -21,6 +21,7 @@ export default {
   color: #2c3e50;
   height:100vh;
   width:100vw;
+  text-align: center;
 }
  body{
    margin:0;
