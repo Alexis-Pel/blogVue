@@ -22,7 +22,14 @@ const routes = [
     path: '/singlepost',
     name: 'SinglePost',
     component: () => import(/* webpackChunkName: "about" */ '../views/SinglePost.vue')
-  }
+  },
+  
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: () => import(/* webpackChunkName: "admin" */ '../views/Admin.vue')
+  },
+  
 ]
 
 const router = new VueRouter({
