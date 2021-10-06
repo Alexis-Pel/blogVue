@@ -42,7 +42,7 @@ export default {
     (this.intervalID = setInterval),
       setTimeout(() => {
         this.show = !this.show;
-      }, 1000);
+      }, 500);
   },
 };
 </script>
@@ -97,7 +97,7 @@ export default {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.25s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .fade-enter, .fade-leave-to {
