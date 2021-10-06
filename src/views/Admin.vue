@@ -31,7 +31,7 @@ export default {
   },
   computed:{
     load(){
-      return this.$store.state.todos
+      return this.$store.state.articles
     }
   }
 }

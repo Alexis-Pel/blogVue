@@ -1,15 +1,26 @@
 <template>
-  <div class="nav">
+  <!-- <div class="nav">
       <div class="nav-left">
           <span class="title">BLOG</span>
       </div>
       <div class="nav-right">
         <div class="links">
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/admin">Admin</router-link>
+            <router-link class="mr-5 hover:text-gray-900" to="/">Home</router-link>
+            <router-link class="mr-5 hover:text-gray-900" to="/about">About</router-link>
+            <router-link class="mr-5 hover:text-gray-900" to="/admin">Admin</router-link>
         </div>
       </div>
+  </div> -->
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <img src="../assets/logo.png" class="w-12 h-12 text-white p-2">
+      <span class="ml-3 text-xl font-extrabold">Blog VueJS</span>
+    </a>
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <router-link class="mr-5 hover:text-blue-500 font-bold" to="/">Home</router-link>
+            <router-link class="mr-5 hover:text-blue-500 font-bold" to="/about">About</router-link>
+            <router-link class="mr-5 hover:text-blue-500 font-bold" to="/admin">Admin</router-link>
+    </nav>
   </div>
 </template>
 

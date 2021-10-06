@@ -1,6 +1,6 @@
 <template>
   <div class="bigContainer">
-    <div class="container"  v-for="item in storage" :key="item">
+    <div class="contain"  v-for="item in storage" :key="item">
       <h1>{{ item.title }}</h1>
       <p>{{ item.date }}</p>
       <h4>{{ item.author }}</h4>
@@ -33,7 +33,7 @@ export default {
     padding: 30px;
     background-color: teal;
 }
-.container{
+.contain{
    display: flex;
    flex-direction: column;
    justify-content: space-around;

@@ -9,7 +9,7 @@ export default new Vuex.Store({
   elle contient toute la donnée du Store,
   accessible de puis n'importe ou sur votre App
   Accessible depuis un composant Vue, via les computed:
-  "this.$store.state.todos"
+  "this.$store.state.articles"
   */
   state: {
     articles: [
@@ -209,10 +209,10 @@ export default new Vuex.Store({
   mutations: {
     /* Les mutations ont 2 params: state, et la data que vous lui envoyez */
     addTodo(state, data) {
-      state.todos.push(data)
+      state.articles.push(data)
     },
     suprr(state, index) {
-      state.todos.splice(index, 1)
+      state.articles.splice(index, 1)
     },
   },
   /*
@@ -224,8 +224,7 @@ export default new Vuex.Store({
     /* Les actions ont 2 params: context, et la data que vous lui envoyez */
     removeTodoByID(context, id) {
       id = parseInt(id)
-      const index = context.state.todos.findIndex((todo) => { return todo.id == id })
-      context.commit('suprr', index)
+      context.commit('suprr', id)
     }
   },
 
