@@ -12,7 +12,7 @@ export default new Vuex.Store({
   "this.$store.state.todos"
   */
   state: {
-    todos: [
+    articles: [
       {
         id: 0,
         title: "Titre de l'article",

@@ -18,7 +18,7 @@ export default {
   name: "ShortArticle",
   computed: {
     storage() {
-      return this.$store.state.todos;
+      return this.$store.state.articles;
     },
   }
 };

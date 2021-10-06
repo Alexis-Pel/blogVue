@@ -1,13 +1,15 @@
 <template>
   <div id="page">
-    <div id="titleBlock">
-      <h1 id="title">{{ storage[$route.params.id].title }}</h1>
-      <h6 id="subtitle">
-        Publié le {{ storage[$route.params.id].date }} par {{ storage[$route.params.id].author }}
-      </h6>
-    </div>
+    <transition name="fade">
+      <div v-if="!show" id="titleBlock">
+        <h1 id="title">{{ storage[$route.params.id].title }}</h1>
+        <h6 id="subtitle">
+          Publié le {{ storage[$route.params.id].date }} par {{ storage[$route.params.id].author }}
+        </h6>
+      </div>
+    </transition>
     <div id="content">
-      <h4>{{ storage[$route.params.id].intro }} <br /><br /></h4>
+      <h4>{{ storage[$route.params.id].intro }}</h4><br/>
       <h5>
         {{ storage[$route.params.id].content }}
       </h5>
@@ -20,13 +22,21 @@ export default {
   name: "SinglePost",
   data() {
     return {
-      index: 0,
+      show: true,
+      index: 1,
+      intervalID: null,
     };
   },
   computed: {
     storage() {
-      return this.$store.state.todos;
+      return this.$store.state.articles;
     },
+  },
+  beforeMount() {
+    (this.intervalID = setInterval),
+      setTimeout(() => {
+        this.show = !this.show;
+      }, 1000);
   },
 };
 </script>
@@ -41,6 +51,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding-left: 2em;
+  padding-right: 2em;
   margin: auto;
 }
 #title {
@@ -72,16 +83,18 @@ export default {
   padding: 1%;
 }
 
-.image {
-  display: flex;
-  height: 30%;
-  width: 100%;
-  background-image: url("../assets/bg-about.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
+#img {
+  height: 180px;
+  width: 250px;
+  margin-left: 65em;
+  position: relative;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
