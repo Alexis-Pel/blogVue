@@ -12,7 +12,7 @@ export default new Vuex.Store({
   "this.$store.state.todos"
   */
   state: {
-    todos: [
+    articles: [
       {
         id: 0,
         title: "Titre de l'article",
@@ -172,6 +172,33 @@ export default new Vuex.Store({
           "Pour combien d'euros...",
         content: "EN BAS LA",
         alt:""
+      },
+      {
+        id: 16,
+        title: "Titre de l'article de beau gosse",
+        date: "06/10/2021",
+        author: "Alexis Pelissier",
+        intro:
+          "Il y a longtemps, dans une galaxie lointaine, très lointaine...",
+        content: "BLAHBLAHBLAHBLAHBLAH",
+      },
+      {
+        id: 17,
+        title: "Les Aventures de Shana",
+        date: "06/10/2021",
+        author: "Mayel LEGRAND",
+        intro:
+          "Mon Maitre m'a emmenée en promenade à l'occasion d'un date Tinder...",
+        content: "BLAHBLAHBLAHBLAHBLAH",
+      },
+      {
+        id: 18,
+        title: "Nouveau Spectacle de Mayel LEGRAND : Tinder Surprise !",
+        date: "06/10/2021",
+        author: "Sandra Dauger",
+        intro:
+          "La vie d'un jeune célibataire n'est pas de tout repos...",
+        content: "BLAHBLAHBLAHBLAHBLAH",
       }
     ]
   },
