@@ -1,15 +1,15 @@
 <template>
   <div id="page">
     <div id="titleBlock">
-      <h1 id="title">{{ storage[index].title }}</h1>
+      <h1 id="title">{{ storage[$route.params.id].title }}</h1>
       <h6 id="subtitle">
-        Publié le {{ storage[index].date }} par {{ storage[index].author }}
+        Publié le {{ storage[$route.params.id].date }} par {{ storage[$route.params.id].author }}
       </h6>
     </div>
     <div id="content">
-      <h4>{{ storage[index].intro }} <br /><br /></h4>
+      <h4>{{ storage[$route.params.id].intro }} <br /><br /></h4>
       <h5>
-        {{ storage[index].content }}
+        {{ storage[$route.params.id].content }}
       </h5>
     </div>
   </div>

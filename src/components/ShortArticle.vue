@@ -1,12 +1,12 @@
 <template>
   <div class="bigContainer">
-    <div class="container"  v-for="item in items" :key="item">
+    <div class="container"  v-for="item in storage" :key="item">
       <h1>{{ item.title }}</h1>
       <p>{{ item.date }}</p>
       <h4>{{ item.author }}</h4>
       <p>{{ item.intro }}</p>
       <div class="buttonDiv">
-      <p class="myButton" @="moreAboutThisArticle">Lire plus</p>
+      <router-link :to="`/singlepost/${item.id}`"><p class="myButton">Lire plus</p></router-link>
       <img class="logo" src="../assets/search-logo.png" alt="">
       </div>
     </div>
@@ -16,46 +16,11 @@
 <script>
 export default {
   name: "ShortArticle",
-  data() {
-    return {
-        item: "",
-      items: [
-        {
-          id: 0,
-          title: "Titre de l'article de beau gosse",
-          date: "06/10/2021",
-          author: "Alexis Pelissier",
-          intro:
-            "Il y a longtemps, dans une galaxie lointaine, très lointaine...",
-          content: "BLAHBLAHBLAHBLAHBLAH",
-        },
-        {
-          id: 1,
-          title: "Les Aventures de Shana",
-          date: "06/10/2021",
-          author: "Mayel LEGRAND",
-          intro:
-            "Mon Maitre m'a emmenée en promenade à l'occasion d'un date Tinder...",
-          content: "BLAHBLAHBLAHBLAHBLAH",
-        },
-        {
-          id: 2,
-          title: "Nouveau Spectacle de Mayel LEGRAND : Tinder Surprise !",
-          date: "06/10/2021",
-          author: "Sandra Dauger",
-          intro:
-            "La vie d'un jeune célibataire n'est pas de tout repos...",
-          content: "BLAHBLAHBLAHBLAHBLAH",
-        },
-      ],
-      methods: {
-          moreAboutThisArticle() {
-              console.log("je suis dans la fonction du bouton")
-            //   router.push({ name: 'SinglePost', params: { id: id } })
-          }
-      }
-    };
-  },
+  computed: {
+    storage() {
+      return this.$store.state.todos;
+    },
+  }
 };
 </script>
 
