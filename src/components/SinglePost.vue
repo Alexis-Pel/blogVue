@@ -41,7 +41,7 @@ export default {
   beforeMount() {
     (this.intervalID = setInterval),
       setTimeout(() => {
-        this.show = !gthis.show;
+        this.show = !this.show;
       }, 1000);
   },
 };
