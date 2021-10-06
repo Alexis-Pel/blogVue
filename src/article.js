@@ -184,7 +184,7 @@ export default new Vuex.Store({
     addTodo(state, data) {
       state.todos.push(data)
     },
-    removeTodoByIndex(state, index) {
+    suprr(state, index) {
       state.todos.splice(index, 1)
     },
   },
@@ -198,7 +198,7 @@ export default new Vuex.Store({
     removeTodoByID(context, id) {
       id = parseInt(id)
       const index = context.state.todos.findIndex((todo) => { return todo.id == id })
-      context.commit('removeTodoByIndex', index)
+      context.commit('suprr', index)
     }
   },
 

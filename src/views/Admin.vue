@@ -22,13 +22,12 @@
 </template>
 
 <script>
-import Store from '../article'
 export default {
   name: 'Admin',
   methods:{
-    test: function(index){
-      console.log(Store.state.todos[index])
-    }
+    suppr(index){
+      this.$store.dispatch('removeTodoByID', index)
+    },
   },
   computed:{
     load(){
