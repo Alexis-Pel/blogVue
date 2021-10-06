@@ -14,17 +14,25 @@ export default new Vuex.Store({
   state: {
     todos: [
       {
-        id: 1,
-        title: 'Must do!',
-        time: new Date(),
-        done: false,
+        id: 0,
+        title: "Titre de l'article",
+        date: "06/10/2021",
+        author: "Alexis Pelissier",
+        intro:
+          "Il y a longtemps, dans une galaxie lointaine, très lointaine...",
+        content: "BLAHBLAHBLAHBLAHBLAH",
+        alt:""
       },
       {
-        id: 2,
-        title: 'Must do 2!',
-        time: new Date(),
-        done: false,
-      },
+        id: 1,
+        title: "Titre de l'article 2",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Est-ce que t'as déja touché...",
+        content: "EN BAS LA",
+        alt:""
+      }
     ]
   },
   /*

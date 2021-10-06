@@ -1,17 +1,16 @@
 <template>
   <div>
     <div id="titleBlock">
-      <h1 id="title">{{ article.title }}</h1>
+      <h1 id="title">{{ storage[index].title }}</h1>
       <h6 id="subtitle">
-        Publié le {{ article.date }} par {{ article.author }}
+        Publié le {{ storage[index].date }} par {{ storage[index].author }}
       </h6>
     </div>
     <div id="content">
       <h5>
-        {{ article.intro }} <br /><br />
-        {{ article.content }}
+        {{ storage[index].intro }} <br /><br />
+        {{ storage[index].content }}
       </h5>
-      {{ todos }}
     </div>
   </div>
 </template>
@@ -21,19 +20,11 @@ export default {
   name: "SinglePost",
   data() {
     return {
-      article: {
-        id: 0,
-        title: "Titre de l'article",
-        date: "06/10/2021",
-        author: "Alexis Pelissier",
-        intro:
-          "Il y a longtemps, dans une galaxie lointaine, très lointaine...",
-        content: "BLAHBLAHBLAHBLAHBLAH",
-      },
+      index: 1
     };
   },
   computed: {
-    todos() {
+    storage() {
       return this.$store.state.todos
     }
   }
