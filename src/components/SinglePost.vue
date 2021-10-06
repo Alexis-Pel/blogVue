@@ -1,9 +1,10 @@
 <template>
-  <div></div>
+  <div><h2>Coucou les loulous</h2></div>
 </template>
 
 <script>
 export default {
+  name: 'SinglePost',
   data() {
     return {
       items: [
