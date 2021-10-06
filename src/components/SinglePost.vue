@@ -7,8 +7,10 @@
       </h6>
     </div>
     <div id="content">
-      <h5>
+      <h4>
         {{ storage[index].intro }} <br /><br />
+      </h4>
+      <h5>
         {{ storage[index].content }}
       </h5>
     </div>
@@ -20,14 +22,14 @@ export default {
   name: "SinglePost",
   data() {
     return {
-      index: 1
+      index: 0,
     };
   },
   computed: {
     storage() {
-      return this.$store.state.todos
-    }
-  }
+      return this.$store.state.todos;
+    },
+  },
 };
 </script>
 
@@ -42,7 +44,7 @@ export default {
   border-bottom: 2px solid;
 }
 #subtitle {
-display: flex;
+  display: flex;
 }
 
 #title,
@@ -53,9 +55,12 @@ display: flex;
 
 #content {
   margin-top: 5rem;
-  padding-bottom: 30%;
   background-color: beige;
-  border: 1px solid;
-  border-radius: 10px;
+  text-align: start;
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 </style>

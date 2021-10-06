@@ -29,7 +29,7 @@ export default new Vuex.Store({
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
-          "Est-ce que t'as déja touché...",
+          "Pour combien d'euros je peut toucher....",
         content: "EN BAS LA",
         alt:""
       }
