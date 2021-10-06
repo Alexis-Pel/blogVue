@@ -29,7 +29,147 @@ export default new Vuex.Store({
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
-          "Pour combien d'euros je peut toucher....",
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 2,
+        title: "Titre de l'article 3",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 3,
+        title: "Titre de l'article 4",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 4,
+        title: "Titre de l'article 5",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 5,
+        title: "Titre de l'article 6",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 6,
+        title: "Titre de l'article 7",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 7,
+        title: "Titre de l'article 8",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 8,
+        title: "Titre de l'article 9",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 9,
+        title: "Titre de l'article 10",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 10,
+        title: "Titre de l'article 11",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 11,
+        title: "Titre de l'article 12",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 12,
+        title: "Titre de l'article 13",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 13,
+        title: "Titre de l'article 14",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 14,
+        title: "Titre de l'article 15",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
+        content: "EN BAS LA",
+        alt:""
+      },
+      {
+        id: 15,
+        title: "Titre de l'article 16",
+        date: "06/10/2021",
+        author: "Alexis Rabiller",
+        intro:
+          "Pour combien d'euros...",
         content: "EN BAS LA",
         alt:""
       }

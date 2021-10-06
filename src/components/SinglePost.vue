@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page">
     <div id="titleBlock">
       <h1 id="title">{{ storage[index].title }}</h1>
       <h6 id="subtitle">
@@ -7,9 +7,7 @@
       </h6>
     </div>
     <div id="content">
-      <h4>
-        {{ storage[index].intro }} <br /><br />
-      </h4>
+      <h4>{{ storage[index].intro }} <br /><br /></h4>
       <h5>
         {{ storage[index].content }}
       </h5>
@@ -34,17 +32,25 @@ export default {
 </script>
 
 <style scoped>
+#page {
+  display: flex;
+  justify-content: center;
+}
 #titleBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 2em;
   margin: auto;
 }
 #title {
+  padding-left: 2em;
+  padding-right: 2em;
   border-bottom: 2px solid;
 }
 #subtitle {
   display: flex;
+  font-size: 50%;
 }
 
 #title,
@@ -55,12 +61,27 @@ export default {
 
 #content {
   margin-top: 5rem;
-  background-color: beige;
   text-align: start;
   position: absolute;
   top: 5em;
-  left: 0;
-  right: 0;
+  left: 2%;
+  right: 2%;
   bottom: 0;
+  border-radius: 20px;
+  box-shadow: 12px 13px 25px 1px rgba(0, 0, 0, 0.51);
+  padding: 1%;
+}
+
+.image {
+  display: flex;
+  height: 30%;
+  width: 100%;
+  background-image: url("../assets/bg-about.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
 </style>
