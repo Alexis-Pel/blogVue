@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page">
     <div id="titleBlock">
       <h1 id="title">{{ storage[index].title }}</h1>
       <h6 id="subtitle">
@@ -7,8 +7,8 @@
       </h6>
     </div>
     <div id="content">
+      <h4>{{ storage[index].intro }} <br /><br /></h4>
       <h5>
-        {{ storage[index].intro }} <br /><br />
         {{ storage[index].content }}
       </h5>
     </div>
@@ -20,29 +20,37 @@ export default {
   name: "SinglePost",
   data() {
     return {
-      index: 1
+      index: 0,
     };
   },
   computed: {
     storage() {
-      return this.$store.state.todos
-    }
-  }
+      return this.$store.state.todos;
+    },
+  },
 };
 </script>
 
 <style scoped>
+#page {
+  display: flex;
+  justify-content: center;
+}
 #titleBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 2em;
   margin: auto;
 }
 #title {
+  padding-left: 2em;
+  padding-right: 2em;
   border-bottom: 2px solid;
 }
 #subtitle {
-display: flex;
+  display: flex;
+  font-size: 50%;
 }
 
 #title,
@@ -53,9 +61,27 @@ display: flex;
 
 #content {
   margin-top: 5rem;
-  padding-bottom: 30%;
-  background-color: beige;
-  border: 1px solid;
-  border-radius: 10px;
+  text-align: start;
+  position: absolute;
+  top: 5em;
+  left: 2%;
+  right: 2%;
+  bottom: 0;
+  border-radius: 20px;
+  box-shadow: 12px 13px 25px 1px rgba(0, 0, 0, 0.51);
+  padding: 1%;
+}
+
+.image {
+  display: flex;
+  height: 30%;
+  width: 100%;
+  background-image: url("../assets/bg-about.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
 </style>

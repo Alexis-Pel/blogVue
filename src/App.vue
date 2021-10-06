@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/admin">Admin</router-link>
-    </div>
+    <Navbar/>
     <router-view/>
   </div>
 </template>
+
+<script>
+import Navbar from './components/Navbar.vue'
+export default {
+  components: { Navbar },
+
+}
+</script>
 
 <style>
 #app {
@@ -16,6 +20,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height:100vh;
+  width:100vw;
 }
 
 #nav {
@@ -25,6 +31,9 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  height:100vh;
+  width:100vw;
+  text-align: center;
 }
 
 #nav a.router-link-exact-active {
