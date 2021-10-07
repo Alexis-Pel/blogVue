@@ -36,6 +36,10 @@ export default {
 .contain{
    box-shadow: 12px 13px 25px 1px rgba(0, 0, 0, 0.51);
 }
+h1{
+    font-size: 25px;
+    font-weight: 600;
+}
 p{
     color: black;
 }
