@@ -200,7 +200,8 @@ export default new Vuex.Store({
           "La vie d'un jeune célibataire n'est pas de tout repos...",
         content: "BLAHBLAHBLAHBLAHBLAH",
       }
-    ]
+    ],
+    editMark: {id: '', title: '', date: '', author: '', intro: '', content: ''}
   },
   /*
   Les mutations permettent de modifier la donnée contenue dans la "state"
@@ -214,6 +215,21 @@ export default new Vuex.Store({
     suprr(state, index) {
       state.articles.splice(index, 1)
     },
+    setTitle(state, data){
+      state.editMark.title = data
+    },
+    setdate(state, data){
+      state.editMark.date = data
+    },
+    setAuthor(state, data){
+      state.editMark.author = data
+    },
+    setIntro(state, data){
+      state.editMark.intro = data
+    },
+    setContent(state, data){
+      state.editMark.content = data
+    }
   },
   /*
   Les actions sont commes des méthodes, un peu plus générales, qui peuvent lire
