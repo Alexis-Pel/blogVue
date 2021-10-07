@@ -50,7 +50,8 @@ p{
     font-weight: 600;
 }
 .myButton:hover {
-    color: teal;
+    
+    color: rgb(7, 207, 207);
     font-weight: 800;
     cursor: pointer;
 }
