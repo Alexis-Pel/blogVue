@@ -58,6 +58,7 @@ export default {
   padding-left: 2em;
   padding-right: 2em;
   border-bottom: 2px solid;
+  font-size: 2em;
 }
 #subtitle {
   display: flex;
