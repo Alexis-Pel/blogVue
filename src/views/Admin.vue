@@ -47,11 +47,9 @@
               </td>
               <td class="px-4 py-3 text-sm border">{{ todo.date }}</td>
               <td class="px-4 py-3 text-xs border">
-                <router-link :to="'/editPost/'"
-                  ><a
-                    href="#"
+                <router-link :to="`/editpost`"
+                  ><a @click="edit(index)"
                     class="text-indigo-600 font-bold hover:text-indigo-900 mr-2"
-                    @click="edit(index)"
                     >Edit</a
                   ></router-link
                 >
@@ -70,6 +68,84 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+    <div>
+      <div class="bg-white rounded p-4 px-4 md:p-8 mb-6">
+        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
+          <div class="lg:col-span-2">
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+              <div class="md:col-span-2">
+                <label for="author">Author</label>
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                  value=""
+                  v-model="author"
+                />
+              </div>
+
+              <div class="md:col-span-3">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                  value=""
+                  placeholder=""
+                  v-model="title"
+                />
+              </div>
+
+              <div class="md:col-span-2">
+                <label for="intro">Intro</label>
+                <textarea
+                  type="text"
+                  name="intro"
+                  id="intro"
+                  class="h-10 border mt-1 rounded px-4 py-2 w-full bg-gray-50"
+                  value=""
+                  placeholder=""
+                  v-model="intro"
+                />
+              </div>
+
+              <div class="md:col-span-3">
+                <label for="content">Content</label>
+                <textarea
+                  type="text"
+                  name="content"
+                  id="content"
+                  class="h-10 border mt-1 rounded px-4 py-2 w-full bg-gray-50"
+                  placeholder=""
+                  v-model="content"
+                />
+              </div>
+
+              <div class="md:col-span-5 text-right">
+                <div class="inline-flex items-end">
+                  <button
+                    class="
+                      bg-blue-500
+                      hover:bg-blue-700
+                      text-white
+                      font-bold
+                      py-2
+                      px-4
+                      rounded
+                    "
+                    @click="add(title, author, intro, content)"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
