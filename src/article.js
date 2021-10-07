@@ -201,7 +201,7 @@ export default new Vuex.Store({
         content: "BLAHBLAHBLAHBLAHBLAH",
       }
     ],
-    editMark: {id: '', title: '', date: '', author: '', intro: '', content: ''}
+    editMark: ''
   },
   /*
   Les mutations permettent de modifier la donnée contenue dans la "state"
@@ -216,19 +216,19 @@ export default new Vuex.Store({
       state.articles.splice(index, 1)
     },
     setTitle(state, data){
-      state.editMark.title = data
+      state.articles[state.editMark].title = data
     },
     setdate(state, data){
-      state.editMark.date = data
+      state.articles[state.editMark].date = data
     },
     setAuthor(state, data){
-      state.editMark.author = data
+      state.articles[state.editMark].author = data
     },
     setIntro(state, data){
-      state.editMark.intro = data
+      state.articles[state.editMark].intro = data
     },
     setContent(state, data){
-      state.editMark.content = data
+      state.articles[state.editMark].content = data
     }
   },
   /*
@@ -241,7 +241,10 @@ export default new Vuex.Store({
     removeTodoByID(context, id) {
       id = parseInt(id)
       context.commit('suprr', id)
-    }
+    },
+    addTodoByID(context, da){
+      context.commit('addTodo', da)
+    },
   },
 
   /* Getters:

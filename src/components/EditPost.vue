@@ -105,20 +105,20 @@ export default {
   },
   computed: {
     markToContent() {
-      return marked(this.$store.state.editMark.content);
+      return marked(this.$store.state.articles[this.$store.state.editMark].content);
     },
     markTotitle() {
-      return marked(this.$store.state.editMark.title);
+      return marked(this.$store.state.articles[this.$store.state.editMark].title);
     },
     markToauthor() {
-      return marked(this.$store.state.editMark.author);
+      return marked(this.$store.state.articles[this.$store.state.editMark].author);
     },
     markToIntro() {
-      return this.intro;
+      return marked(this.$store.state.articles[this.$store.state.editMark].intro);
     },
     titre: {
       get() {
-        return this.$store.state.editMark.title;
+        return this.$store.state.articles[this.$store.state.editMark].title;
       },
       set(value) {
         this.$store.commit("setTitle", value);
@@ -126,7 +126,7 @@ export default {
     },
     auteur: {
       get() {
-        return this.$store.state.editMark.author;
+        return this.$store.state.articles[this.$store.state.editMark].author;
       },
       set(value) {
         this.$store.commit("setAuthor", value);
@@ -134,7 +134,7 @@ export default {
     },
     article: {
       get() {
-        return this.$store.state.editMark.content;
+        return this.$store.state.articles[this.$store.state.editMark].content;
       },
       set(value) {
         this.$store.commit("setContent", value);
@@ -142,7 +142,7 @@ export default {
     },
     intro: {
       get() {
-        return this.$store.state.editMark.intro;
+        return this.$store.state.articles[this.$store.state.editMark].intro;
       },
       set(value) {
         this.$store.commit("setIntro", value);
