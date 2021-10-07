@@ -25,7 +25,7 @@ export default new Vuex.Store({
       },
       {
         id: 1,
-        title: "Titre de l'article 2",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -35,7 +35,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        title: "Titre de l'article 3",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -45,7 +45,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        title: "Titre de l'article 4",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -55,7 +55,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        title: "Titre de l'article 5",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -65,7 +65,7 @@ export default new Vuex.Store({
       },
       {
         id: 5,
-        title: "Titre de l'article 6",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -75,7 +75,7 @@ export default new Vuex.Store({
       },
       {
         id: 6,
-        title: "Titre de l'article 7",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -85,7 +85,7 @@ export default new Vuex.Store({
       },
       {
         id: 7,
-        title: "Titre de l'article 8",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -95,7 +95,7 @@ export default new Vuex.Store({
       },
       {
         id: 8,
-        title: "Titre de l'article 9",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -105,7 +105,7 @@ export default new Vuex.Store({
       },
       {
         id: 9,
-        title: "Titre de l'article 10",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -115,7 +115,7 @@ export default new Vuex.Store({
       },
       {
         id: 10,
-        title: "Titre de l'article 11",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -125,7 +125,7 @@ export default new Vuex.Store({
       },
       {
         id: 11,
-        title: "Titre de l'article 12",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -135,7 +135,7 @@ export default new Vuex.Store({
       },
       {
         id: 12,
-        title: "Titre de l'article 13",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -145,7 +145,7 @@ export default new Vuex.Store({
       },
       {
         id: 13,
-        title: "Titre de l'article 14",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -155,7 +155,7 @@ export default new Vuex.Store({
       },
       {
         id: 14,
-        title: "Titre de l'article 15",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:
@@ -165,7 +165,7 @@ export default new Vuex.Store({
       },
       {
         id: 15,
-        title: "Titre de l'article 16",
+        title: "Titre de l'article",
         date: "06/10/2021",
         author: "Alexis Rabiller",
         intro:

@@ -1,12 +1,12 @@
 <template>
   <div class="bigContainer">
-    <div class="contain"  v-for="item in storage" :key="item">
-      <h1>{{ item.title }}</h1>
+    <div class="contain flex flex-col bg-white items-center justify-evenly sm:w-1/3 h-96 text-green-700 mb-10 p-12 rounded-lg"  v-for="(item, index) in storage" :key="item.id">
+      <h1>{{ item.title }} {{ index + 1 }} </h1>
       <p>{{ item.date }}</p>
       <h4>{{ item.author }}</h4>
       <p>{{ item.intro }}</p>
       <div class="buttonDiv">
-      <router-link :to="`/singlepost/${item.id}`"><p class="myButton">Lire plus</p></router-link>
+      <router-link :to="`/singlepost/${index}`"><p class="myButton">Lire plus</p></router-link>
       <img class="logo" src="../assets/search-logo.png" alt="">
       </div>
     </div>
@@ -34,17 +34,7 @@ export default {
     background-color: teal;
 }
 .contain{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-   width: 600px;
-   color: teal;
-   background-color: white;
    box-shadow: 12px 13px 25px 1px rgba(0, 0, 0, 0.51);
-   margin-bottom: 30px;
-   padding: 20px;
-   border-radius: 20px;
 }
 p{
     color: black;

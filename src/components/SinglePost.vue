@@ -2,7 +2,7 @@
   <div id="page">
     <transition name="fade">
       <div v-if="!show" id="titleBlock">
-        <h1 id="title">{{ storage[$route.params.id].title }}</h1>
+        <h1 id="title">{{ storage[$route.params.id].title }} {{ $route.params.id }}</h1>
         <h6 id="subtitle">
           Publié le {{ storage[$route.params.id].date }} par {{ storage[$route.params.id].author }}
         </h6>
@@ -23,7 +23,6 @@ export default {
   data() {
     return {
       show: true,
-      index: 1,
       intervalID: null,
     };
   },
