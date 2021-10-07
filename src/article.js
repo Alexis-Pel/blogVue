@@ -225,7 +225,10 @@ export default new Vuex.Store({
     removeTodoByID(context, id) {
       id = parseInt(id)
       context.commit('suprr', id)
-    }
+    },
+    addTodoByID(context, da){
+      context.commit('addTodo', da)
+    },
   },
 
   /* Getters:
