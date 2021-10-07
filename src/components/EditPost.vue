@@ -57,6 +57,7 @@
             <div class="md:col-span-5 text-right">
               <div class="inline-flex items-end">
                 <button
+                  @click="annuler()"
                   class="
                     bg-blue-500
                     hover:bg-blue-700
@@ -68,7 +69,7 @@
                     rounded
                   "
                 >
-                  Edit
+                  Annuler
                 </button>
               </div>
             </div>
@@ -101,20 +102,46 @@ export default {
   components: {},
   data() {
     return {
+      content: this.article,
+      title: this.titre,
+      author: this.auteur,
+      intron: this.intro,
     };
+  },
+  methods: {
+    annuler() {
+      this.$store.commit("setContent", this.article);
+      this.$store.commit("setTitle", this.title);
+      this.$store.commit("setAuthor", this.author);
+      this.$store.commit("setIntro", this.intron);
+    },
+  },
+  mounted() {
+    this.content = this.article;
+    this.title = this.titre;
+    this.author = this.auteur;
+    this.intron = this.intro;
   },
   computed: {
     markToContent() {
-      return marked(this.$store.state.articles[this.$store.state.editMark].content);
+      return marked(
+        this.$store.state.articles[this.$store.state.editMark].content
+      );
     },
     markTotitle() {
-      return marked(this.$store.state.articles[this.$store.state.editMark].title);
+      return marked(
+        this.$store.state.articles[this.$store.state.editMark].title
+      );
     },
     markToauthor() {
-      return marked(this.$store.state.articles[this.$store.state.editMark].author);
+      return marked(
+        this.$store.state.articles[this.$store.state.editMark].author
+      );
     },
     markToIntro() {
-      return marked(this.$store.state.articles[this.$store.state.editMark].intro);
+      return marked(
+        this.$store.state.articles[this.$store.state.editMark].intro
+      );
     },
     titre: {
       get() {
