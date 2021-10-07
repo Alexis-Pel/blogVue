@@ -100,11 +100,20 @@ export default {
               title: title,
               author: author, 
               intro: intro, 
-              content: content, 
+              content: content,
+              id: this.load.length,
               date: `${new Date().getDate() < 10 ? `0${new Date().getDate()}`:new Date().getDate()}/${((new Date().getMonth())+1) < 10 ? `0${new Date().getMonth()+1}`:`${new Date().getMonth()+1}`}/${new Date().getFullYear()}`,
-            } 
-        this.$store.dispatch('addTodoByID', data)
-        console.log(data, this.$store.state) 
+            }
+        if ( data.title == "" || data.author == "" || data.intro == "" || data.content== "" ){
+          alert("Veuillez remplir tous les champs s'il vous plaît")
+        }else{
+          this.$store.dispatch('addTodoByID', data)
+          this.title = ""
+          this.author = ""
+          this.intro = ""
+          this.content =""
+
+        }
     }
   }
 }
