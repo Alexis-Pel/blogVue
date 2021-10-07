@@ -193,7 +193,7 @@ export default new Vuex.Store({
       },
       {
         id: 18,
-        title: "Nouveau Spectacle de Mayel LEGRAND : Tinder Surprise !",
+        title: "Spectacle de Mayel LEGRAND : Tinder Surprise !",
         date: "06/10/2021",
         author: "Sandra Dauger",
         intro:
